@@ -1,11 +1,17 @@
 
 public class StudyGit {
     public static void main (String[] args) {
-        System.out.println("He");
-        // Обьявление класса
-        FirstOne buggati = new FirstOne("Buggati", 400, "SportCar");
-        System.out.println(buggati);
-        System.out.println("second commit" + buggati);
+        int year = 2008;
+        System.out.println(year(year));
+
+    }
+    public static String year (int year) {
+        if (year % 400 == 0 || year % 4 == 0) {
+            return "Год високосный";
+        } else if (year % 100 == 0) {
+            return "Год невисокосный";
+        }
+        return "Год невисокосный";
     }
 }
 
